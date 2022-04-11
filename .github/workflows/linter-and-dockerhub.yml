@@ -25,7 +25,7 @@ on:
 # Set the Job #
 ###############
 jobs:
-  linker:
+  linter:
     # Name the Job
     name: Lint Code Base
     # Set the agent to run on
@@ -57,6 +57,7 @@ jobs:
    
    
   docker:
+    needs: linter
     runs-on: ubuntu-latest
     steps:
       -
